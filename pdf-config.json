@@ -1,0 +1,19 @@
+{ 
+  "format": "Letter",
+  "border": {
+      "top": "0.5in",
+      "right": "0.5in",
+      "bottom": "0.5in",
+      "left": "0.5in"
+  },
+  "header": {
+    "height": "0"
+  },
+  "footer": {
+    "height": "2mm",
+    "contents": {
+      "first": " ",
+      "default": "<div style='text-align:right;color:#333333;font-size:0.875em'>Ackman, {{page}}/{{pages}}</div>"
+    }
+  }
+}
