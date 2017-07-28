@@ -1,0 +1,39 @@
+{
+  "name": "css",
+  "version": "1.0.0",
+  "description": "woola css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ackmanlab/css.git"
+  },
+  "keywords": [
+    "css",
+    "less",
+    "markdown",
+    "pdf",
+    "phantom",
+    "notebook",
+    "article"
+  ],
+  "author": "James Ackman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ackmanlab/css/issues"
+  },
+  "homepage": "https://github.com/ackmanlab/css#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1"
+  }
+}
