@@ -11,7 +11,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
   	filename: '[name].css',
-  	path: path.resolve(__dirname, 'assets')
+  	path: path.resolve(__dirname, 'css')
+    // path: path.resolve(../testsite, 'mycss')
   },
   module: {
     rules: [
@@ -39,7 +40,8 @@ module.exports = {
         use: [{
           loader: 'file-loader',
           options: {
-            name: '[name].[ext]',
+            name: 'assets/[name].[ext]',
+            publicPath: './css/'
           }
         }]
       },
@@ -48,7 +50,8 @@ module.exports = {
         use: [{
           loader: 'file-loader',
           options: {
-            name: '[name].[ext]',
+            name: 'assets/[name].[ext]',
+            publicPath: './css/'
           }
         }]
       }
