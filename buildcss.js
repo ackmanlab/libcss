@@ -1,8 +1,18 @@
+// npm install less
+// npm install less-plugin-clean-css
+// ./node_modules/less/bin/lessc --rootpath=css/build/ --relative-urls --clean-css="--s1" build/bootstrap.less build/main.css
+
 const less = require('less')
 const fs = require('fs')
 const path = require('path')
 const CleanCSS = require('clean-css')
-// const cssPath = path.join(__dirname, 'src/bootstrap-custom.less')
+
+const options = {
+  filename: path.join(__dirname, 'build/bootstrap.less'),
+  rootpath: 'css/build/',
+  relativeUrls: true,
+  outFile: path.join('build/', 'main.css')
+}
 
 // getFile: reads utf8 content from a file
 const readFile = (fileName) => new Promise((resolve, reject) => {
@@ -21,34 +31,15 @@ const writeFile = (fileName, datain) => new Promise((resolve, reject) => {
   })
 })
 
-const options = {
-  filename: path.join(process.cwd(), 'css/bootstrap-custom.less'),
-  rootpath: 'css/',
-  relativeUrls: true
-}
-
-
-// readFile(options.filename)
-// .then(str => { return less.render(str, options) })
-// .then( data => {
-//   const output = new CleanCSS({level: 1, returnPromise: true}).minify(data.css)
-//   console.log(output.styles)
-//   })
-
-
 readFile(options.filename)
 .then(str => { return less.render(str, options) })
 .then( data => {
   new CleanCSS({level: 1, returnPromise: true})
   .minify(data.css)
   .then(output => {
-    writeFile('css/main.css', output.styles)
+    writeFile(options.outFile, output.styles)
+    // console.log(data.imports)
   })
   .catch (err => { console.log(err) })
 })
 .catch (err => { console.log(err) })
-
-
-// npm install less
-// npm install less-plugin-clean-css
-// ./node_modules/less/bin/lessc --rootpath=css/ --relative-urls --clean-css="--s1" css/bootstrap-custom.less css/main.css

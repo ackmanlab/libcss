@@ -1,11 +1,11 @@
 {
   "name": "css",
   "version": "1.0.0",
-  "description": "Screen and print styles for site content",
+  "description": "Screen and print styles for content",
   "main": "buildcss.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "buildcss": "./node_modules/less/bin/lessc --rootpath=css/ --relative-urls --clean-css='--s1' css/bootstrap-custom.less css/main.css"
+    "buildcss": "node buildcss.js"
   },
   "repository": {
     "type": "git",
