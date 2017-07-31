@@ -1,10 +1,11 @@
-/* config.css requires less.js*/
-/*@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");*/
+/*bootstrap-custom.css – requires less.js*/
 /*TODO: bootstrap-f44597ba/css/bootstrap.min.css has a parse issue with a missing bracket*/
-@import (less) "bootstrap-f44597ba/css/bootstrap.css";
-@import (less) "bootstrap-0cee321f/css/bootstrap.min.css" print;
+/*@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");*/
 /*@import (less) "https://s3-us-west-2.amazonaws.com/cdn.ackmanlab.com/css/bootstrap-f44597ba/css/bootstrap.css";*/
 /*@import (less) "https://s3-us-west-2.amazonaws.com/cdn.ackmanlab.com/css/bootstrap-0cee321f/css/bootstrap.min.css" print;*/
+
+@import (less) "bootstrap-f44597ba/css/bootstrap.css";
+@import (less) "bootstrap-0cee321f/css/bootstrap.css" print;
 
 img {
     max-width: 700px;
@@ -317,8 +318,8 @@ pre code {
   }
 }
 
-.file{ list-style-image: url('icons/icon-file-16.png'); }
-.dir{ list-style-image: url('icons/icon-94-folder-16.png'); }
-.md{ list-style-image: url('icons/icon-markdown-16.png'); }
+.file{ list-style-image: url('icons/file-16.png'); }
+.dir{ list-style-image: url('icons/folder-16.png'); }
+.md{ list-style-image: url('icons/markdown-16.png'); }
 
 .katex { font-size: 1.5em; }
