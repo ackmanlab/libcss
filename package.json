@@ -1,15 +1,16 @@
 {
-  "name": "css",
+  "name": "libcss",
   "version": "1.0.0",
-  "description": "Screen and print styles for content",
+  "description": "Screen and print styles for app/site content",
   "main": "buildcss.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "buildcss": "node buildcss.js"
+    "buildcss": "node buildcss.js",
+    "postinstall": "npm run buildcss; echo 'current directory is: '$(npm prefix); echo '\nEnter path for libcss symlink (e.g. ../testsite/css) or just press enter to continue without making a css symlink:'; read dir; echo $dir; if [ -z $dir ]; then echo 'no symlink made'; else ln -s $(npm prefix) $dir; fi"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ackmanlab/css.git"
+    "url": "git+https://github.com/ackmanlab/libcss.git"
   },
   "keywords": [
     "css",
@@ -23,10 +24,11 @@
   "author": "James Ackman",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ackmanlab/css/issues"
+    "url": "https://github.com/ackmanlab/libcss/issues"
   },
-  "homepage": "https://github.com/ackmanlab/css#readme",
+  "homepage": "https://github.com/ackmanlab/libcss#readme",
   "dependencies": {
+    "clean-css": "^4.1.7",
     "less": "^2.7.2",
     "less-plugin-clean-css": "^1.5.1"
   },
