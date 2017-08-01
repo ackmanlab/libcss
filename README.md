@@ -1,47 +1,37 @@
 ---
 author: James Ackman  
-title: Custom css
+title: Custom bootstrap CSS  
 date: 2017-08-01 13:38:09  
 ---
 
-Screen and print styles for post and article web app/site content. Currently the styles based off of customized [Bootstrap v3.3.7](http://getbootstrap.com) less configurations. 
+libcss– Screen and print styles for app/site content. Currently the styles are based off of customized [Bootstrap v3.3.7](http://getbootstrap.com) less configurations with no remote imports/dependencies. If npm is not installed locally see [Installing node, npm](https://docs.npmjs.com/getting-started/installing-node)
 
-## Install for use within web app/site
 
-Clone to root of your app's site directory:  
+
+## Install locally using npm
+
+Install in a local directory-- an npm postinstall script will take care of prompting you on where to make a symlink (e.g. `ln -s ./libcss $mydir/mywebapp/css`) and creating it so that you will have an alias called 'css' the rootdir of your web app/site. This is useful for making custom local editing/configuration/testing of the less stylesheet:  
 
 ```bash
-rootdir='/path/to/my/webapp'
-cd $rootdir
-git clone https://github.com/ackmanlab/libcss.git
+mydir='/path/to/my/projects'
+cd $mydir
+npm install https://github.com/ackmanlab/libcss.git
 ```
 
-Build css from bootstrap.less
+
+## Install directly from git repo
+
+Clone to a local directory:
 
 ```bash
-cd css
+git clone https://github.com/ackmanlab/libcss.git
+cd libcss
+npm install #same as 'npm run buildcss' or node buildcss.js
+```
+
+## Re-build css from bootstrap.less
+
+```bash
+cd libcss
 npm run buildcss
 ```
-
-
-## Install for custom local editing/configuration of less stylesheet
-
-If you want to edit the bootstrap.less file or add other work then install in a local directory and then add a symlink to your web app/site:  
-
-```bash
-rootdir='/path/to/my/webapp'
-cd $rootdir
-npm install https://github.com/ackmanlab/libcss.git
-ln -s ./node_modules/libcss ./css
-```
-
-Or install libcss in a sibling or parent directory relative to your webapp folder (since the node_modules folder won't be tracked for changes in your app's git repo):  
-
-```
-rootdir='/path/to/my/webapp'
-cd $rootdir
-cd ..
-npm install https://github.com/ackmanlab/libcss.git
-ln -s ./libcss $rootdir/css
-```
-
