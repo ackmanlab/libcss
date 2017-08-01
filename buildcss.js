@@ -1,6 +1,6 @@
 // npm install less
 // npm install less-plugin-clean-css
-// ./node_modules/less/bin/lessc --rootpath=css/build/ --relative-urls --clean-css="--s1" build/bootstrap.less build/main.min.css
+// ./node_modules/less/bin/lessc --rootpath=/css/build/ --relative-urls --clean-css="--s1" build/bootstrap.less build/main.min.css
 
 const less = require('less')
 const fs = require('fs')
@@ -9,7 +9,7 @@ const CleanCSS = require('clean-css')
 
 const options = {
   filename: path.join(__dirname, 'build/bootstrap.less'),
-  rootpath: 'css/build/',
+  rootpath: '/css/build/',
   relativeUrls: true,
   outFile: path.join('build/', 'main.min.css')
 }
