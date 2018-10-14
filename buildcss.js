@@ -9,9 +9,11 @@ const CleanCSS = require('clean-css')
 
 const options = {
   filename: path.join(__dirname, 'build/bootstrap.less'),
+  // filename: path.join(__dirname, 'build/bootstrap-vita.less'),
   rootpath: '/css/build/',
   relativeUrls: true,
   outFile: path.join('build/', 'main.min.css')
+  // outFile: path.join('build/', 'vita.css')
 }
 
 // getFile: reads utf8 content from a file
