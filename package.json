@@ -31,7 +31,8 @@
   "dependencies": {
     "clean-css": "^4.1.7",
     "less": "^2.7.2",
-    "less-plugin-clean-css": "^1.5.1"
+    "less-plugin-clean-css": "^1.5.1",
+    "micromatch": "^3.1.10"
   },
   "devDependencies": {}
 }

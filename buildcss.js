@@ -12,8 +12,8 @@ const CleanCSS = require('clean-css')
 const mm = require('micromatch')
 
 const options = {
-  srcPath: 'build/', 
-  dstPath: 'build/', 
+  srcPath: './', 
+  dstPath: './', 
   overwrite: false, 
   extFilter: ['*.less'],
   // filename: path.join(__dirname, 'build/bootstrap.less'),
@@ -57,13 +57,14 @@ const processFiles = (options) => {
   .then(files => {
     files.forEach(file => {
       
-      readFile(file)
+      readFile(path.join(options.srcPath,file))
       .then(str => { return less.render(str, options) })
       .then( data => {
+        // new CleanCSS({level: 1, returnPromise: true, format: 'beautify'})
         new CleanCSS({level: 1, returnPromise: true})
         .minify(data.css)
         .then(output => {
-          writeFile(path.join(path.parse(file).name,'.min.css'), output.styles)
+          writeFile(path.join(options.dstPath, path.parse(file).name + '.min.css'), output.styles)
           // console.log(data.imports)
         })
         .catch (err => { console.log(err) })

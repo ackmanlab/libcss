@@ -1,11 +1,11 @@
-/*bootstrap-vita.css – requires less.js*/
+/*bootstrap-custom.css – requires less.js*/
 /*TODO: bootstrap-f44597ba/css/bootstrap.min.css has a parse issue with a missing bracket*/
 /*@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");*/
 /*@import (less) "https://s3-us-west-2.amazonaws.com/cdn.ackmanlab.com/css/bootstrap-f44597ba/css/bootstrap.css";*/
 /*@import (less) "https://s3-us-west-2.amazonaws.com/cdn.ackmanlab.com/css/bootstrap-0cee321f/css/bootstrap.min.css" print;*/
 
-@import (less) "bootstrap-f44597ba/css/bootstrap.css";
-@import (less) "bootstrap-0cee321f/css/bootstrap.css" print;
+@import (less) "build/bootstrap-f44597ba/css/bootstrap.css";
+@import (less) "build/bootstrap-0cee321f/css/bootstrap.css" print;
 
 img {
     max-width: 700px;
@@ -27,17 +27,7 @@ body {
   outline: 1300px solid #fff;
   margin: 16px auto;
   padding: 48px;
-  font-family: Palatino, Georgia, serif;
 }
-
-h1,h2,h3,h4 {
-  font-family: sans-serif;
-}
-
-#dropmenu {font-family: sans-serif;}
-
-/*Config ordered lists to have sufficient indent for two place decimal numbers for reduced indentation*/
-ol { padding-left: 2.0em; }
 
 
 /*body {
@@ -160,7 +150,8 @@ figcaption {
 
 table {
   /*background-color: transparent;*/
-  display:block; /* required for .table-responsive overflow to work */
+  /* required for .table-responsive overflow to work */
+  display:block;
   &:extend(.table all, .table-bordered all, .table-striped all, .table-responsive all, .table-hover all);
   width: auto;
   max-width: 100%;
@@ -221,7 +212,7 @@ pre code {
   }*/
 
   body {
-      /*text-align: justify;*/
+      text-align: justify;
       text-justify: auto;
       width: 100%;
       border: none;
@@ -316,19 +307,19 @@ pre code {
   .footnote-ref a:link, 
   .footnote-ref a:visited, 
   .footnote-ref a:hover, 
-  .footnote-ref a:active
-   {
+  .footnote-ref a:active {
     color: #333333;
   }
-  h1 {font-size: 18px;}
-
-.footnotes, .references {text-align: left};
-
+  h1 { font-size: 16px;
+  }
+  .footnotes, 
+  .references { 
+    text-align: left;
+  }
 }
 
-.file{list-style-image: url('https://cdn4.iconfinder.com/data/icons/linecon/512/file-16.png');}
-.dir{list-style-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/699086-icon-94-folder-16.png');}
-.md{list-style-image: url('https://cdn0.iconfinder.com/data/icons/octicons/1024/markdown-16.png');}
+.file{ list-style-image: url('icons/file-16.png'); }
+.dir{ list-style-image: url('icons/folder-16.png'); }
+.md{ list-style-image: url('icons/markdown-16.png'); }
 
-.katex {font-size: 1.5em;}
-
+.katex { font-size: 1.5em; }
