@@ -22,9 +22,9 @@ img {
 
 /* Make page display in browser similar to markserv/less/github.less*/
 body {
-  width: 816px;
-  border: 1px solid #ddd;
-  outline: 1300px solid #fff;
+  /* width: 816px; */
+  /* border: 1px solid #ddd; */
+  /* outline: 1300px solid #fff; */
   margin: 16px auto;
   padding: 48px;
 }
@@ -152,11 +152,15 @@ table {
   /*background-color: transparent;*/
   /* required for .table-responsive overflow to work */
   display:block;
-  &:extend(.table all, .table-bordered all, .table-striped all, .table-responsive all, .table-hover all);
-  width: auto;
-  max-width: 100%;
+  /* &:extend(.table all, .table-bordered all, .table-striped all, .table-responsive all, .table-hover all); */
+  &:extend(.table all, .table-striped all, .table-hover all);
+  /* width: auto; */
+  /* max-width: 100%; */
   /*margin-bottom: 12px;*/
   font-weight: 300;
+  /* border: 1px solid #ddd !important; */
+  /* border: none !important; */
+  /* border-collapse: collapse; */
 }
 caption {
   padding-top: 8px;

@@ -161,7 +161,8 @@ figcaption {
 
 table {
   /*background-color: transparent;*/
-  display:block; /* required for .table-responsive overflow to work */
+  /* required for .table-responsive overflow to work */
+  display:block; 
   &:extend(.table all, .table-bordered all, .table-striped all, .table-responsive all, .table-hover all);
   width: auto;
   max-width: 100%;
@@ -222,7 +223,7 @@ pre code {
   }*/
 
   body {
-      /*text-align: justify;*/
+      text-align: justify;
       text-justify: auto;
       width: 100%;
       border: none;
@@ -321,7 +322,7 @@ pre code {
     color: #333333;
   }
   h1 {
-    font-size: 20px;
+      font-size: 20px;
   }
   h2 {
     font-size: 18px;

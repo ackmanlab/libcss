@@ -28,6 +28,7 @@ body {
   margin: 16px auto;
   padding: 48px;
   font-family: Palatino, Georgia, serif;
+  font-size: 16px;
 }
 
 h1,h2,h3,h4 {
@@ -160,7 +161,8 @@ figcaption {
 
 table {
   /*background-color: transparent;*/
-  display:block; /* required for .table-responsive overflow to work */
+  /* required for .table-responsive overflow to work */
+  display:block;
   &:extend(.table all, .table-bordered all, .table-striped all, .table-responsive all, .table-hover all);
   width: auto;
   max-width: 100%;
@@ -229,7 +231,6 @@ pre code {
       margin: 0;
       padding: 0;
       color: #000;
-      font-size: 14px;
   }
 
     *,
@@ -245,6 +246,7 @@ pre code {
   .h2,
   h3,
   .h3 {
+    font-weight: 500;
     margin-top: 11px;
     margin-bottom: 3px;
   }
@@ -321,6 +323,12 @@ pre code {
     color: #333333;
   }
   h1 {
+      font-size: 26px; 
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
     font-size: 18px;
   }
   .footnotes, 
