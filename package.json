@@ -29,10 +29,10 @@
   },
   "homepage": "https://github.com/ackmanlab/libcss#readme",
   "dependencies": {
-    "clean-css": "^4.1.7",
-    "less": "^2.7.2",
+    "clean-css": "^4.2.1",
+    "less": "^3.10.3",
     "less-plugin-clean-css": "^1.5.1",
-    "micromatch": "^3.1.10"
+    "micromatch": "^4.0.2"
   },
   "devDependencies": {}
 }
