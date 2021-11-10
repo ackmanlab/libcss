@@ -29,11 +29,12 @@ body {
   padding: 48px;
   font-family: Palatino, Georgia, serif;
   font-size: 16px;
-  font-weight: 100;
+  font-weight: lighter;
 }
 
 h1,h2,h3,h4 {
   font-family: sans-serif;
+  margin-bottom: 3px;
 }
 
 #dropmenu {font-family: sans-serif;}
@@ -262,11 +263,26 @@ pre code {
 
   .page-break { display: block; page-break-before: always; }
 
-  pre,
-  blockquote {
+  pre {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
+
+
+//font-style: italic; 
+
+  blockquote {
+    color: #828282;
+    border-left: 4px solid #e8e8e8;
+    padding-left: 15px;
+    font-size: 1.0em;
+    letter-spacing: -1px;
+      page-break-inside: avoid;
+    }
+    blockquote > :last-child {
+      margin-bottom: 0; }
+
+
   thead {
     display: table-header-group;
   }
@@ -323,15 +339,13 @@ pre code {
     color: #333333;
   }
   h1 {
-      font-size: 18px;
-      font-weight: 700;
+      font-size: 20px;
   }
   h2 {
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 18px;
   }
   h3 {
-    font-weight:600;
+    font-size: 16px;
   }
   .footnotes, 
   .references {
@@ -343,4 +357,5 @@ pre code {
 .dir{ list-style-image: url('build/icons/folder-16.png'); }
 .md{ list-style-image: url('build/icons/markdown-16.png'); }
 
-.katex { font-size: 1.5em; }
+.katex { font-size: 1.0em; }
+
