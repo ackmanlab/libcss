@@ -1464,11 +1464,12 @@ samp {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 code {
-  padding: 2px 4px;
+  /* padding: 2px 4px; */
   font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
-  border-radius: 4px;
+  /* color: #c7254e; */
+  /* background-color: #f9f2f4; */
+  /* background-color: #cccccc; */
+  /* border-radius: 4px; */
 }
 kbd {
   padding: 2px 4px;
@@ -1488,16 +1489,16 @@ kbd kbd {
 }
 pre {
   display: block;
-  padding: 9.5px;
-  margin: 0 0 10px;
+  /* padding: 9.5px; */
+  /* margin: 0 0 10px; */
   font-size: 13px;
   line-height: 1.42857143;
   word-break: break-all;
   word-wrap: break-word;
-  color: #333333;
-  background-color: #f5f5f5;
+  /* color: #333333; */
+  /* background-color: #f5f5f5; */
   border: 1px solid #cccccc;
-  border-radius: 4px;
+  /* border-radius: 4px; */
 }
 pre code {
   padding: 0;
