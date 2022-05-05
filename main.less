@@ -330,3 +330,25 @@ pre code {
 .md{ list-style-image: url('build/icons/markdown-16.png'); }
 
 .katex { font-size: 1.2em; }
+
+
+.container {
+  display: inline-block;
+}
+
+.container img {
+  display: block;
+  /* transition: transform .4s; */
+}
+
+.container:hover img {
+  background-color: #fff;
+  border: 1px solid #000;
+  transform: scale(2.0);
+  transform-origin: 0% 100%;
+}
+
+.container:hover figcaption {
+  display: inline;
+}
+
